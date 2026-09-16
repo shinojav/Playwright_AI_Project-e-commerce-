@@ -98,3 +98,6 @@ Playwright automatically creates an HTML report after test execution:
 ```bash
 npm run report
 ```
+## CI/CD Learning
+
+This project is being used to learn GitHub Actions and CI/CD with Playwright.

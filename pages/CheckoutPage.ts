@@ -48,22 +48,18 @@ export class CheckoutPage {
   }
 
   async fillCustomerInformation(firstName?: string, lastName?: string, postalCode?: string): Promise<void> {
-    if (firstName) {
+    await this.firstNameInput.waitFor({ state: 'visible' });
+
+    if (firstName !== undefined) {
       await this.firstNameInput.fill(firstName);
-    } else {
-      await this.firstNameInput.clear();
     }
 
-    if (lastName) {
+    if (lastName !== undefined) {
       await this.lastNameInput.fill(lastName);
-    } else {
-      await this.lastNameInput.clear();
     }
 
-    if (postalCode) {
+    if (postalCode !== undefined) {
       await this.postalCodeInput.fill(postalCode);
-    } else {
-      await this.postalCodeInput.clear();
     }
   }
 

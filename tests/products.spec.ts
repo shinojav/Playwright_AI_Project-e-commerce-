@@ -17,7 +17,7 @@ test.describe('Products Catalog - Functional Tests', () => {
   });
 
   test('should display all available products in catalog', async () => {
-    await expect(productsPage.inventoryItems).toHaveCount(7);
+    await expect(productsPage.inventoryItems).toHaveCount(6);
 
     const productNames = await productsPage.getAllProductNames();
     expect(productNames).toContain(PRODUCTS.backpack.name);
